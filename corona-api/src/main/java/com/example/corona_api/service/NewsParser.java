@@ -32,7 +32,7 @@ public class NewsParser {
         if (matcher.find()) {
             return matcher.group();
         }
-        return null;  // Eğer tarih bulunamazsa
+        return null;
     }
 
     private String extractCity(String text) {
@@ -42,7 +42,7 @@ public class NewsParser {
         if (matcher.find()) {
             return matcher.group();
         }
-        return null;  // Eğer il bulunamazsa
+        return null;
     }
 
     private int extractCases(String text) {
@@ -64,7 +64,6 @@ public class NewsParser {
     }
 
     private int extractRecoveries(String text) {
-        // Taburcu sayısını çıkarma (örneğin: "5 kişide taburcu oldu")
         Pattern recoveryPattern = Pattern.compile("\\d+ kişide taburcu oldu");
         Matcher matcher = recoveryPattern.matcher(text);
         if (matcher.find()) {
