@@ -22,12 +22,13 @@ public class News {
 
     public News() {
     }
-    public News(String date, String city, int cases, int deaths, int recoveries) {
+    public News(String date, String city, int cases, int deaths, int recoveries, String originalNews) {
         this.date = date;
         this.city = city;
         this.cases = cases;
         this.deaths = deaths;
         this.recoveries = recoveries;
+        this.originalNews = originalNews;
     }
 
    
